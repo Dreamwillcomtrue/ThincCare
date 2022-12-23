@@ -6,13 +6,12 @@ import "firebase/storage";
 //STORED THE FIREBASE DETAILS IN .env.local FILE
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA4pJyVt9CTPpFLGWYD72UllyJB6pMAL6s",
-  authDomain: "testlevel2-f2f79.firebaseapp.com",
-  projectId: "testlevel2-f2f79",
-  storageBucket: "testlevel2-f2f79.appspot.com",
-  messagingSenderId: "265902883073",
-  appId: "1:265902883073:web:a53d0bebe514c785eb1b00",
-  measurementId: "G-6TK0Q6XSNN"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
